@@ -1,32 +1,52 @@
-# React + TypeScript + Vite
+# 🍽️ Food Vote - อะไรก็ได้ ไม่มีในโลก (What to Eat?)
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+โปรเจกต์เว็บไซต์สำหรับโหวตเมนูอาหาร สร้างขึ้นมาเพื่อแก้ปัญหายอดฮิตระดับชาติอย่าง "วันนี้กินอะไรดี?"
+โดยให้ผู้ใช้สามารถเสนอและโหวตเมนูอาหารร่วมกันได้ เพื่อให้การตัดสินใจมื้อต่อไปง่ายและรวดเร็วขึ้น
 
-Currently, two official plugins are available:
+## 🚀 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Frontend Build Tool:** [Vite](https://vitejs.dev/) - สำหรับการพัฒนาที่รวดเร็ว
+- **Language:** TypeScript
+- **Linter:** [Oxlint](https://oxc-project.github.io/docs/guide/usage/linter.html) - ตัว Linter ที่ทำงานได้รวดเร็วมาก
 
-## React Compiler
+## ⚙️ การติดตั้งและรันโปรเจกต์ (Getting Started)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. **โคลนโปรเจกต์**
 
-## Expanding the Oxlint configuration
+   ```bash
+   git clone https://github.com/your-username/your-repo-name.git
+   cd your-repo-name
+   ```
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+2. **ติดตั้ง Dependencies** (คุณสามารถใช้ `npm`, `yarn` หรือ `pnpm` ได้ตามที่ถนัด)
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+   ```bash
+   npm install
+   ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+3. **รันเซิร์ฟเวอร์จำลองสำหรับพัฒนา**
+   ```bash
+   npm run dev
+   ```
+   จากนั้นเปิดเว็บบราวเซอร์ไปที่ `http://localhost:5173` (หรือพอร์ตที่ Vite กำหนด)
+
+## 📜 คำสั่ง Scripts ที่มีให้ใช้งาน
+
+คำสั่งต่าง ๆ ถูกตั้งค่าไว้ใน `package.json` คุณสามารถรันคำสั่งเหล่านี้ผ่าน npm, yarn หรือ pnpm ได้:
+
+- `npm run dev`: เริ่มต้น Development Server ด้วย Vite สำหรับการเขียนโค้ดและทดสอบแบบ Real-time
+- `npm run build`: ทำการตรวจสอบ Type ด้วย TypeScript (`tsc -b`) และ Build โปรเจกต์สำหรับการนำไปใช้งานจริง (Production)
+- `npm run lint`: ตรวจสอบความถูกต้องและคุณภาพของโค้ดด้วย `oxlint`
+- `npm run preview`: รันเซิร์ฟเวอร์จำลองเพื่อทดสอบไฟล์ที่ได้จากการ Build (โฟลเดอร์ `dist`) ว่าทำงานได้ปกติหรือไม่ก่อนนำไป Deploy จริง
+
+## 📌 แผนการพัฒนาในอนาคต (To-Do / Roadmap)
+
+_(ส่วนนี้สามารถลบหรือแก้ไขได้ตามจริง)_
+
+- [ ] ระบบเพิ่มเมนูอาหารใหม่
+- [ ] ระบบนับคะแนนโหวตแบบเรียลไทม์
+- [ ] ฟังก์ชันสุ่มเมนูอาหาร (Randomizer) สำหรับคนที่ขี้เกียจโหวต
+
+## 🤝 การมีส่วนร่วม (Contributing)
+
+หากพบปัญหาในการใช้งานหรือมีข้อเสนอแนะเพิ่มเติม สามารถเปิด [Issues](https://github.com/your-username/your-repo-name/issues) หรือสร้าง Pull Request เข้ามาได้เลยครับ!
